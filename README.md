@@ -76,11 +76,11 @@ Table 2. Run on Apple M1.
 
 ![No prepressing](img/no_levelize.png)
 
-Figure 1.
+Figure 1. AES, no levelize.
 
 ![Preprocessing](img/levelize.png)
 
-Figure 2.
+Figure 2. AES, levelized.
 
 ## References
 [1][Analysis of parallel algorithms — Wikipedia](https://en.wikipedia.org/wiki/Analysis_of_parallel_algorithms)
