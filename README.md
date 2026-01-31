@@ -72,6 +72,16 @@ Table 1. Run on AMD Milan.
 
 Table 2. Run on Apple M1.
 
+## Parallel execution bandwidth profile
+
+![No prepressing](img/no_levelize.png)
+
+Figure 1.
+
+![Preprocessing](img/levelize.png)
+
+Figure 2.
+
 ## References
 [1][Analysis of parallel algorithms — Wikipedia](https://en.wikipedia.org/wiki/Analysis_of_parallel_algorithms)
 
