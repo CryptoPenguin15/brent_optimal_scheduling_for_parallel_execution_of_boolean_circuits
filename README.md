@@ -4,7 +4,7 @@ Is it possible to improve performance without altering the circuit, merely reord
 
 ## Objective
 
-Preprocess existing Boolean circuit files[3]. This involves constructing the dependency DAG, computing the depth of every node to determine the critical path, and organizing gates into execution layers. Logical equivalence to the original circuit is preserved exactly.
+Preprocess existing Boolean circuit files[3]. This involves constructing the dependency DAG[4], computing the depth of every node to determine the critical path[1], and organizing gates into execution layers. Logical equivalence to the original circuit is preserved exactly.
 
 ## Engine
 
@@ -53,9 +53,10 @@ In large Boolean circuits such as those used for AES, the total gate count 𝑊 
 
 ## Benchmarks
 
-See [4] and [5] for engines supporting the format specified in [2].
+Source for different TFHE AES approaches is found in [2]. Key expansion is not included there; see the comment in [5]. The chosen error probability is also important, see [5] for timing comparisons. 
+See [6] and [7] for engines supporting the format specified in [3].
 
-Trials using engine[4] and AES circuit from [2]:
+Trials using engine[6] and AES circuit from [3], with key expansion:
 
 | Logical CPUs | Stage                | bc Time (s) | Speedup |
 |--------------|----------------------|-------------|---------|
@@ -85,11 +86,16 @@ Figure 2. AES, levelized.
 ## References
 [1][Analysis of parallel algorithms — Wikipedia](https://en.wikipedia.org/wiki/Analysis_of_parallel_algorithms)
 
-[2]['Bristol Fashion' MPC Circuits](https://nigelsmart.github.io/MPC-Circuits/)
+[2][Benchmark of AES Evaluation with TFHE](https://github.com/daphnetrm/Benchmark-of-AES-Evaluation-with-TFHE)
 
-[3][Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
+[3]['Bristol Fashion' MPC Circuits](https://nigelsmart.github.io/MPC-Circuits/)
 
-[4][tfhe-rs-examples/aes_128_threads](https://github.com/CryptoPenguin15/tfhe-rs-examples/tree/main/aes_128_threads)
+[4][Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 
-[5][tomtau/fhe-aes](https://github.com/tomtau/fhe-aes)
+[5][Further Improvements in AES Execution over TFHE](https://eprint.iacr.org/2025/075.pdf)
+
+[6][tfhe-rs-examples/aes_128_threads](https://github.com/CryptoPenguin15/tfhe-rs-examples/tree/main/aes_128_threads)
+
+[7][tomtau/fhe-aes](https://github.com/tomtau/fhe-aes)
+
 
