@@ -58,18 +58,19 @@ See [6] and [7] for engines supporting the format specified in [3].
 
 Trials using engine[6] and AES circuit from [3], with key expansion:
 
-| Logical CPUs | Stage                | bc Time (s) | Speedup |
-|--------------|----------------------|-------------|---------|
-| 16           |                      | 58.41       | 1.00×   |
-| 112          |                      | 25.63       |         |
-| 16           | After preprocessing  | 28.83       | 2.03×   |
+| Logical CPUs | Stage                | Key exp (s) | Rounds (s) | bc Time (s) | Speedup |
+|--------------|----------------------|-------------|----------- |-------------|---------|
+| 16           |                      |             |            | 58.41       | 1.00×   |
+| 112          |                      |             |            | 25.63       |         |
+| 16           | After preprocessing  |             |            | 28.83       | 2.03×   |
 
 Table 1. Run on AMD Milan.
 
-| Logical CPUs | Stage                | bc Time (s) | Speedup |
-|--------------|----------------------|-------------|---------|
-| 5            |                      | 156.07      | 1.00×   |
-| 5            | After preprocessing  | 99.27       | 1.57×   |
+| Logical CPUs | Stage                | Key exp (s) | Rounds (s) | Tot time (s) | Speedup |
+|--------------|----------------------|-------------|------------|--------------|---------|
+| 5            |                      |             |            | 156.07       | 1.00×   |
+| 5            | After preprocessing  | 19.23       | 77.19      | 96.42        | 1.62×   |
+| [7]          |                      | 62.51       | 192.45     | 254.96       |         |
 
 Table 2. Run on Apple M1.
 
